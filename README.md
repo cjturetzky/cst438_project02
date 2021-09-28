@@ -6,3 +6,12 @@ Simple Wishlist Web Application that will allow users to sign in, pick and choos
 
 # Mockup
 (https://files.slack.com/files-pri/T6LG86XDE-F02FTPBDWMS/img_1210.png)
+
+# Contributers
+Jose Caudillo (JoseC07) https://github.com/JoseC07
+
+Connor Turetzky
+
+Jeremy Meharg
+
+Ramiro Soto
