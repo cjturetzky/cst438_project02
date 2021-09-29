@@ -3,7 +3,6 @@ from django.http import HttpResponse
 
 # create your views here
 
-
 def home(request):
     return render(request, 'static/LandingPage.html')
 
@@ -12,3 +11,4 @@ def products(request):
 
 def customer(request):
     return HttpResponse('customer')
+
