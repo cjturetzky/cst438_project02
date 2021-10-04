@@ -1,0 +1,18 @@
+h1{
+    color: deepskyblue;
+    background-color: darkblue;
+    padding: 25px;
+    text-align: center;
+}
+
+.item-div{
+    display: flex;
+    border: groove black;
+    padding: 10px;
+}
+
+.item-holder{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
