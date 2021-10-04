@@ -16,3 +16,9 @@ h1{
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
+
+.login-button-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
