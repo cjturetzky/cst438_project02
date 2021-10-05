@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+# from django.urls import include
 
 from . import views
 
@@ -23,3 +24,12 @@ urlpatterns = [
     path('products/', views.products),
     path('customer/', views.customer),
 ]
+
+
+# This is commented out for now but may be needed in the future
+# Definition: This new item includes a path() that forwards requests with the pattern catalog/
+# to the module catalog.urls (the file with the relative URL catalog/urls.py) als0 will need
+# the import from above.
+# urlpatterns += [
+#     path('catalog/', include('catalog.urls')),
+# ]
