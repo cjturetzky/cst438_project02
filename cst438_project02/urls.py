@@ -17,15 +17,16 @@ from django.contrib import admin
 from django.urls import path
 # from django.urls import include
 
-from . import views
+# from . import main\views
 
 urlpatterns = [
-    path('', views.home),
-    path('products/', views.products),
-    path('customer/', views.customer),
+    # path('', views.home),
+    # path('products/', views.products),
+    # path('customer/', views.customer),
+    path('admin/', admin.site.urls),
 ]
 
-
+# this url takes you to the page that explains these things more and why they may be needed: https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/skeleton_website
 # This is commented out for now but may be needed in the future
 # Definition: This new item includes a path() that forwards requests with the pattern catalog/
 # to the module catalog.urls (the file with the relative URL catalog/urls.py) als0 will need
@@ -33,3 +34,9 @@ urlpatterns = [
 # urlpatterns += [
 #     path('catalog/', include('catalog.urls')),
 # ]
+
+# from django.conf import settings
+# from django.conf.urls.static import static
+#
+#
+# urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
