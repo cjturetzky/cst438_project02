@@ -17,12 +17,14 @@ from django.contrib import admin
 from django.urls import path
 # from django.urls import include
 
-# from . import main\views
+import views
+
 
 urlpatterns = [
-    # path('', views.home),
-    # path('products/', views.products),
-    # path('customer/', views.customer),
+    path('',views.home),
+    path('products/', views.products),
+    path('customer/', views.customer),
+    path('create/',views.create, name='create'),
     path('admin/', admin.site.urls),
 ]
 

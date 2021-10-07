@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Create ACCOUNT</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+      <a class="navbar-brand" href=""> GIFTCHAMPION</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'create' %}">CREATE ACCOUNT</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="">CONTACT</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="">GIFT IDEAS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="">SIGN IN</a>
+          </li>
+        </ul>
+
+      </div>
+    </nav>
+
+    <form action="">
+      <label for="Uname">User Name:</label><br>
+      <input type="text" id="Uname" name="Uname" ><br>
+      <label for="passW">Password:</label><br>
+      <input type="text" id="passW" name="passW" ><br><br>
+      <input type="submit" value="Submit">
+    </form>     
+      
+    
+
+  </body>
+</html>
