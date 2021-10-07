@@ -12,3 +12,6 @@ def products(request):
 def customer(request):
     return HttpResponse('customer')
 
+def create(request):
+    return render(request, 'createAccount.html')
+
