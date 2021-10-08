@@ -4,14 +4,19 @@ from django.http import HttpResponse
 # Create your views here.
 
 def home(request):
-    return render(request, 'static/LandingPage.html')
+    #return HttpResponse('<h1>Blog Home</h1>')
+    return render(request, 'LandingPage.html')
 
-def products(request):
-    return HttpResponse('products')
+def about(request):
+    return HttpResponse('<h1>Blog About</h1>')
 
-def customer(request):
-    return HttpResponse('customer')
 
-def create(request):
-    return render(request, 'createAccount.html')
+# def products(request):
+#     return HttpResponse('products')
+#
+# def customer(request):
+#     return HttpResponse('customer')
+#
+# def create(request):
+#     return render(request, 'createAccount.html')
 
