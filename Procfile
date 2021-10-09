@@ -1,1 +1,1 @@
-web:gunicorn cst438_project02.wsgi
+web: gunicorn wsgi:cst438_project02
