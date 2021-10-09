@@ -16,6 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+from django.conf import settings
+from django.conf.urls.static import static
+
 #import views
 
 
@@ -27,7 +30,7 @@ urlpatterns = [
     # path('customer/', views.customer),
     # path('create/',views.create, name='create'),
     # path('admin/', admin.site.urls),
-]
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 # this url takes you to the page that explains these things more and why they may be needed: https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/skeleton_website
 # This is commented out for now but may be needed in the future
