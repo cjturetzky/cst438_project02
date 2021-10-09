@@ -15,11 +15,9 @@ from pathlib import Path
 
 import os.path
 from pathlib import Path
-import django_heroku
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-import heroku as heroku
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -138,4 +136,3 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-django_heroku.settings(locals())
