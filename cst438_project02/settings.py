@@ -81,10 +81,21 @@ WSGI_APPLICATION = 'cst438_project02.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'dfbsa5rvjnf2r7',
+        'USER': 'ghvpgiwsslxnae',
+        'PASSWORD': '940918a2b7b2d911376919a090dea6cc2e875b0f74669d4ca62311583f4f6a41',
+        'HOST': 'ec2-23-21-4-7.compute-1.amazonaws.com',
+        'PORT': '5432',
     }
 }
 
