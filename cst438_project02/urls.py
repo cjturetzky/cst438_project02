@@ -14,18 +14,19 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
-# from django.urls import include
+from django.urls import path, include
 
-import views
+#import views
 
 
 urlpatterns = [
-    path('',views.home),
-    path('products/', views.products),
-    path('customer/', views.customer),
-    path('create/',views.create, name='create'),
     path('admin/', admin.site.urls),
+    path('', include('main.urls')),
+    # path('',views.home),
+    # path('products/', views.products),
+    # path('customer/', views.customer),
+    # path('create/',views.create, name='create'),
+    # path('admin/', admin.site.urls),
 ]
 
 # this url takes you to the page that explains these things more and why they may be needed: https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/skeleton_website
