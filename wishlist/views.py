@@ -34,6 +34,9 @@ def about(request):
 # def customer(request):
 #     return HttpResponse('customer')
 #
-# def create(request):
-#     return render(request, 'createAccount.html')
+def listView(request):
+    return render(request, 'wishlist/listView.html')
+
+def register(request):
+    return render(request, 'wishlist/register.html')
 
