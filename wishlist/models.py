@@ -4,12 +4,14 @@ from django.contrib.auth.models import User
 
 # Create your models here.
 class Users(models.Model):
-    name = models.CharField(max_length=20)
+    username = models.CharField(max_length=20)
+    password = models.CharField(max_length=20)
 
     def __str__(self):
-        return self.name
+        return self.username
 
 class WishlistItem(models.Model):
+    user_id = models.ForeignKey(Users, on_delete=models.CASCADE)
     wname = models.CharField(max_length=200)
     url = models.CharField(max_length=500)
     img = models.CharField(max_length=500)
