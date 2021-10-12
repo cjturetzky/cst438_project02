@@ -4,11 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="01007601-91d9-4fa4-90fb-cddb33801a6e" name="Changes" comment="" />
+    <list default="true" id="01007601-91d9-4fa4-90fb-cddb33801a6e" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/wishlist/templates/wishlist/ListView.html" beforeDir="false" afterPath="$PROJECT_DIR$/wishlist/templates/wishlist/ListView.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
