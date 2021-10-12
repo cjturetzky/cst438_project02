@@ -1,0 +1,17 @@
+Index: templates/static/LandingPage.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!DOCTYPE html>\n<html lang=\"en\" dir=\"ltr\">\n  <head>\n    <meta charset=\"utf-8\">\n    <title>Boostrap Installation</title>\n    <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x\" crossorigin=\"anonymous\">\n  </head>\n  <body>\n\n    <nav class=\"navbar navbar-expand-lg navbar-dark bg-dark\">\n\n      <a class=\"navbar-brand\" href=\"\"> GIFTCHAMPION</a>\n\n      <button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarTogglerDemo01\" aria-controls=\"navbarTogglerDemo01\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n      <span class=\"navbar-toggler-icon\"></span>\n    </button>\n\n      <div class=\"collapse navbar-collapse\" id=\"navbarTogglerDemo01\">\n\n        <ul class=\"navbar-nav ms-auto\">\n          <li class=\"nav-item\">\n            <a class=\"nav-link\" href=\"\">CONTACT</a>\n          </li>\n          <li class=\"nav-item\">\n            <a class=\"nav-link\" href=\"\">GIFT IDEAS</a>\n          </li>\n          <li class=\"nav-item\">\n            <a class=\"nav-link\" href=\"\">SIGN IN</a>\n          </li>\n        </ul>\n\n      </div>\n    </nav>\n\n  </body>\n</html>
+===================================================================
+diff --git a/templates/static/LandingPage.html b/templates/static/LandingPage.html
+--- a/templates/static/LandingPage.html	
++++ b/templates/static/LandingPage.html	
+@@ -9,7 +9,7 @@
+ 
+     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+ 
+-      <a class="navbar-brand" href=""> GIFTCHAMPION</a>
++      <a class="navbar-brand" href=""> WISHLIST</a>
+ 
+       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+       <span class="navbar-toggler-icon"></span>
