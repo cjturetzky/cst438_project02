@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>View List</title>
+    <title>Edit Item</title>
     <link rel="stylesheet" href="../../static/wishlist/listpage.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
@@ -34,10 +34,13 @@
 
 <div class="container">
     <div class="item">
-        <input type="text" placeholder="Item Image URL">
-        <input type="text" placeholder="Item Name">
-        <input type="text" placeholder="URL">
-        <input type="text" placeholder="Item Description">
+        <form action="../../EditItem.py">
+            <input type="text" id="image_url" placeholder="Item Image URL">
+            <input type="text" id="item_name" placeholder="Item Name">
+            <input type="text" id="item_url" placeholder="URL">
+            <input type="text" id="item_description" placeholder="Item Description">
+            <input type="submit">
+        </form>
     </div>
 </div>
 </body>
