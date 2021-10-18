@@ -22,6 +22,9 @@ from users import views as user_views
 #login views
 from django.contrib.auth import views as auth_views
 
+#import media
+from django.conf import settings
+from django.conf.urls.static import static
 #import views
 
 
@@ -38,6 +41,9 @@ urlpatterns = [
     # path('create/',views.create, name='create'),
     # path('admin/', admin.site.urls),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 # this url takes you to the page that explains these things more and why they may be needed: https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/skeleton_website
 # This is commented out for now but may be needed in the future
