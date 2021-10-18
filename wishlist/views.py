@@ -27,6 +27,11 @@ def home(request):
 def about(request):
     return render(request, 'wishlist/about.html', {'title': 'About'})
 
+def edit(request):
+    if request.method == 'POST':
+        print("lol");
+    else:
+        return render(request, 'wishlist/EditItemPage.html', context)
 
 # def products(request):
 #     return HttpResponse('products')
