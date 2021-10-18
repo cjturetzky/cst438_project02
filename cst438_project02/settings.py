@@ -38,6 +38,8 @@ ALLOWED_HOSTS = ['127.0.0.1', 'cst438project02.herokuapp.com']
 
 INSTALLED_APPS = [
     'wishlist.apps.MainConfig',
+    'users.apps.UsersConfig',
+    'crispy_forms',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -147,3 +149,12 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+LOGIN_REDIRECT_URL = 'wishlist-home'
+LOGIN_URL = 'login'
+
+#path for django uploaded files
+#with this we create profile_pics inside media directory
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
