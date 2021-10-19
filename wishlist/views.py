@@ -27,6 +27,19 @@ def home(request):
 def about(request):
     return render(request, 'wishlist/about.html', {'title': 'About'})
 
+# def createAccount(request):
+#     if request.method == 'POST':
+#         if request.POST.get('username') and request.POST.get('password'):
+#             user = Users()
+#             user.username = request.POST.get('username')
+#
+#             user.password = request.POST.get('password')
+#             user.save()
+#
+#             return render(request, 'wishlist/login.html', {'title' : 'Login'})
+#     else:
+#         return render(request, 'wishlist/createaccount.html', {'title' : 'Create Account'})
+#
 
 # def products(request):
 #     return HttpResponse('products')
