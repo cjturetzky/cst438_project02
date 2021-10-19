@@ -3,6 +3,7 @@ from django.shortcuts import render, redirect
 #not used since we inherited from userregosterform
 from django.contrib import messages
 from .forms import UserRegisterForm, UserUpdateForm, ProfileUpdateForm
+from .models import User
 
 #user login decorator to show profile only if user is signed in
 from django.contrib.auth.decorators import login_required
@@ -43,6 +44,25 @@ def profile(request):
     }
 
     return render(request, 'users/profile.html', context)
+
+@login_required(login_url='http://127.0.0.1:8000/login')
+def remove_user(request):
+    if request.method == 'POST':
+        form = RemoveUser(request.POST)
+
+        if form.is_valid():
+            rem = User.objects.get(username=form.cleaned_data['username'])
+            if rem is not None:
+                rem.delete()
+                return redirect('main')
+            else:
+               ## Send some error messgae
+    else:
+        form = RemoveUser()
+    context = {'form': form}
+    return render(request, 'remove_user.html', context)def delete_user(request,user_id):
+   
+
 
 # messages.debug
 # messages.info
