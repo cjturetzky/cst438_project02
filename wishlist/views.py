@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Wish, Users
+from .models import Wish
 # Create your views here.
 
 posts = [

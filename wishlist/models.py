@@ -10,7 +10,6 @@ class Users(models.Model):
         return self.name
 
 class WishlistItem(models.Model):
-    user_id = models.ForeignKey(Users, on_delete=models.CASCADE)
     wname = models.CharField(max_length=200)
     url = models.CharField(max_length=500)
     img = models.CharField(max_length=500)
