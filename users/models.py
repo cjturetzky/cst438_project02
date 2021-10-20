@@ -10,12 +10,14 @@ class Profile(models.Model):
     #(CASCADE)if user is deleted them profile is deleted, but if profile is deleted wont delete user
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     image = models.ImageField(default='default.jpg', upload_to='profile_pics')
+    
 
     def __str__(self):
         return f'{self.user.username} Profile'
 
     #use save class of our parent class(Pillow)
     def save(self, *args, **kwargs):
+        
         super().save(*args, **kwargs)
 
         img = Image.open(self.image.path)
