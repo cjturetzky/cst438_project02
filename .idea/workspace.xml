@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="01007601-91d9-4fa4-90fb-cddb33801a6e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wishlist/templates/wishlist/ListView.html" beforeDir="false" afterPath="$PROJECT_DIR$/wishlist/templates/wishlist/ListView.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/cst438_project02.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/cst438_project02.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wishlist/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/wishlist/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wishlist/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/wishlist/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,7 +26,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Create_landing_page" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />

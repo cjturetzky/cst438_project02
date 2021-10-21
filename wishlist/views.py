@@ -30,6 +30,8 @@ def about(request):
 def listview(request):
     return render(request, 'wishlist/listview.html')
 
+def getItems(request):
+    return "Lots and lots of data"
 
 # def createAccount(request):
 #     if request.method == 'POST':
