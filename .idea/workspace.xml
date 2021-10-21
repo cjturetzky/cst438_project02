@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="01007601-91d9-4fa4-90fb-cddb33801a6e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/cst438_project02.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/cst438_project02.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wishlist/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/wishlist/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wishlist/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/wishlist/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -84,6 +82,7 @@
       <workItem from="1633390598281" duration="1745000" />
       <workItem from="1633638888047" duration="2777000" />
       <workItem from="1634056928608" duration="260000" />
+      <workItem from="1634851164121" duration="81000" />
     </task>
     <servers />
   </component>

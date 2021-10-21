@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import Wish
+from .models import WishlistItem
 # Create your views here.
 
 posts = [
@@ -31,7 +32,7 @@ def listview(request):
     return render(request, 'wishlist/listview.html')
 
 def getItems(request):
-    return "Lots and lots of data"
+    return WishlistItem.objects.all()
 
 # def createAccount(request):
 #     if request.method == 'POST':
