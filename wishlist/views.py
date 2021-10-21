@@ -27,6 +27,10 @@ def home(request):
 def about(request):
     return render(request, 'wishlist/about.html', {'title': 'About'})
 
+def listview(request):
+    return render(request, 'wishlist/listview.html')
+
+
 # def createAccount(request):
 #     if request.method == 'POST':
 #         if request.POST.get('username') and request.POST.get('password'):
