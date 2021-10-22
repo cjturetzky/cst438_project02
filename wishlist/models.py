@@ -2,6 +2,8 @@ from django.db import models
 from django.utils import timezone
 from django.contrib.auth.models import User
 
+from django.urls import reverse
+
 # Create your models here.
 class Users(models.Model):
     name = models.CharField(max_length=20)
@@ -26,3 +28,7 @@ class Wish(models.Model):
 
     def __str__(self):
         return self.title
+
+        #find location of specific wish -- reverse
+    def get_absolute_url(self):
+        return reverse('wishlist-detail', kwargs={'pk': self.pk})
