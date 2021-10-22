@@ -40,30 +40,19 @@ urlpatterns = [
     path('profile/', user_views.profile, name='profile'),
     path('login/', auth_views.LoginView.as_view(template_name='users/login.html'), name='login'),
     path('logout/', auth_views.LogoutView.as_view(template_name='users/logout.html'), name='logout'),
-    path('delete/',user_views.delete, name='delete'),
+
+    path('password-reset/', auth_views.PasswordResetView.as_view(template_name='users/password_reset.html'), name='password_reset'),
+    path('password-reset/done/', auth_views.PasswordResetDoneView.as_view(template_name='users/password_reset_done.html'), name='password_reset_done'),
+    path('password-reset-confirm/<uidb64>/<token>/', auth_views.PasswordResetConfirmView.as_view(template_name='users/password_reset_confirm.html'), name='password_reset_confirm'),
+
+    path('password-reset-complete/', auth_views.PasswordResetCompleteView.as_view(template_name='users/password_reset_complete.html'), name='password_reset_complete'),
+
     path('', include('wishlist.urls')),
-    path('listview/', wish_views.listview,name='listview')
-    # path('',views.home),
-    # path('products/', views.products),
-    # path('customer/', views.customer),
-    # path('create/',views.create, name='create'),
-    # path('admin/', admin.site.urls),
+
+
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
-# this url takes you to the page that explains these things more and why they may be needed: https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/skeleton_website
-# This is commented out for now but may be needed in the future
-# Definition: This new item includes a path() that forwards requests with the pattern catalog/
-# to the module catalog.urls (the file with the relative URL catalog/urls.py) als0 will need
-# the import from above.
-# urlpatterns += [
-#     path('catalog/', include('catalog.urls')),
-# ]
 
-# from django.conf import settings
-# from django.conf.urls.static import static
-#
-#
-# urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
