@@ -109,6 +109,60 @@ def about(request):
     return render(request, 'wishlist/about.html', {'title': 'About'})
 
 
+#wishs/
+class wishapi(APIView):
+    
+    def get(self, request, *args, **kwargs):
+        id = kwargs.get('id', -1)
+        print(id)
+
+        if id <= -1:
+            wishes = Wish.objects.all()
+            serializer = WishSerializer(wishes, many =True)
+            print('if')
+        else:
+            try:
+                wishes = Wish.objects.get(id=id)
+            except Wish.DoesNotExist:
+                # We have no object! Do something...
+                pass
+            
+            serializer = WishSerializer(wishes, many =False)
+            print('else')
+        
+        
+        return Response(serializer.data)
+
+    def post(self,request):
+        pass
+
+    def delete(self, request, *args, **kwargs):
+        id = kwargs.get('id', -1)
+       
+        wi = Wish.objects.get(id=id)
+        wi.delete()
+        res = {'msg':'Wish Deleted Successfully!'}
+        return Response(res)
+    
+    
+    
+    
+    
+
+
+# def createAccount(request):
+#     if request.method == 'POST':
+#         if request.POST.get('username') and request.POST.get('password'):
+#             user = Users()
+#             user.username = request.POST.get('username')
+#
+#             user.password = request.POST.get('password')
+#             user.save()
+#
+#             return render(request, 'wishlist/login.html', {'title' : 'Login'})
+#     else:
+#         return render(request, 'wishlist/createaccount.html', {'title' : 'Create Account'})
+#
 
 # def products(request):
 #     return HttpResponse('products')
