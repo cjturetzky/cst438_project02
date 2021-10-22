@@ -63,10 +63,21 @@ class wishapi(APIView):
         
         return Response(serializer.data)
 
-
-
     def post(self,request):
         pass
+
+    def delete(self, request, *args, **kwargs):
+        id = kwargs.get('id', -1)
+       
+        wi = Wish.objects.get(id=id)
+        wi.delete()
+        res = {'msg':'Wish Deleted Successfully!'}
+        return Response(res)
+    
+    
+    
+    
+    
 
 
 # def createAccount(request):
