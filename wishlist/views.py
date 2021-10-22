@@ -24,28 +24,51 @@ posts = [
 ]
 
 def home(request):
+    
     context = {
         'posts': Wish.objects.all()
     }
     return render(request, 'wishlist/LandingPage.html', context)
 
+
+
 def about(request):
     return render(request, 'wishlist/about.html', {'title': 'About'})
 
 def listview(request):
-    posts = WishlistItem.objects.all()
+    posts = Wish.objects.all()
     return render(request, 'wishlist/listview.html',{'posts':posts})
 
 #wishs/
 class wishapi(APIView):
+    
+    def get(self, request, *args, **kwargs):
+        id = kwargs.get('id', -1)
+        print(id)
 
-    def get(self,request):
-        wishes = Wish.objects.all()
-        serializer = WishSerializer(wishes, many =True)
+        if id in kwargs:
+            wishes = Wish.objects.all()
+            serializer = WishSerializer(wishes, many =True)
+            print('if')
+        else:
+            try:
+                wishes = Wish.objects.get(id=id)
+            except MyModel.DoesNotExist:
+                # We have no object! Do something...
+                pass
+            
+            serializer = WishSerializer(wishes, many =False)
+            print('else')
+        
+        
         return Response(serializer.data)
 
-    def post(self):
+
+
+    def post(self,request):
         pass
+
+
 # def createAccount(request):
 #     if request.method == 'POST':
 #         if request.POST.get('username') and request.POST.get('password'):
