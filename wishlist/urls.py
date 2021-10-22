@@ -25,7 +25,8 @@ from . import views
 urlpatterns = [
     path('', views.home, name='wishlist-home'),
     path('about/', views.about, name='wishlist-about'),
-    path('wishs/', views.wishapi.as_view())
+    path('wishes/', views.wishapi.as_view()),
+    path('wishes/<int:id>/', views.wishapi.as_view())
     
     # path('createaccount/', views.createAccount, name='wishlist-createaccount'),
     
