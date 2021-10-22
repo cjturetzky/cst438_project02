@@ -46,14 +46,14 @@ class wishapi(APIView):
         id = kwargs.get('id', -1)
         print(id)
 
-        if id in kwargs:
+        if id <= -1:
             wishes = Wish.objects.all()
             serializer = WishSerializer(wishes, many =True)
             print('if')
         else:
             try:
                 wishes = Wish.objects.get(id=id)
-            except MyModel.DoesNotExist:
+            except Wish.DoesNotExist:
                 # We have no object! Do something...
                 pass
             
