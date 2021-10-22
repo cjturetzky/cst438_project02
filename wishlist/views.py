@@ -4,6 +4,7 @@ from .models import Wish
 from django.contrib.auth.models import User
 from rest_framework.views import APIView
 from rest_framework.response import Response
+from rest_framework import status
 from .serializers import WishSerializer
 #import django class base views, import detail view
 from django.views.generic import (
@@ -136,8 +137,32 @@ class wishapi(APIView):
         
         return Response(serializer.data)
 
-    def post(self,request):
-        pass
+    def post(self,request,format= None):
+        data = request.data
+        print(data)
+
+
+        if(data['content'] == ''):
+            serializer = WishSerializer(data=data,fields=('id','title','date_posted','author'))
+        elif(data['date_posted'] == ''):
+            serializer = WishSerializer(data=data,fields=('id','title','content','author'))
+        elif(data['author'] == ''):
+            serializer = WishSerializer(data=data,fields=('id','title','content','date_posted'))
+        elif(data['author'] == '' and data['date_posted'] == ''):
+            serializer = WishSerializer(data=data,fields=('id','title','content'))
+        elif(data['author'] == '' and data['content'] == ''):
+            serializer = WishSerializer(data=data,fields=('id','title','date_posted'))
+        elif(data['content'] == '' and data['date_posted'] == ''):
+            serializer = WishSerializer(data=data,fields=('id','title','author'))
+        elif(data['content'] == '' and data['date_posted'] == '' and data['author'] == ''):
+            serializer = WishSerializer(data=data,fields=('id','title'))
+        else:
+            serializer = WishSerializer(data=data,fields=('id','title','content','date_posted','author'))
+            
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errros, status=status.HTTP_400_BAD_REQUEST)
 
     def delete(self, request, *args, **kwargs):
         id = kwargs.get('id', -1)
