@@ -172,6 +172,15 @@ class wishapi(APIView):
         res = {'msg':'Wish Deleted Successfully!'}
         return Response(res)
     
+    def patch(self, request,*args, **kwargs):
+        id = kwargs.get('id', -1)
+        wish = Wish.objects.get(id=id)
+        serializer = WishSerializer(data=request.data,instance=wish,partial=True)
+        if serializer.is_valid():
+            serializer.save()
+            return Response({'msg':'Wish Updated Successfully!'})
+        return Response(serializer.errros, status=status.HTTP_400_BAD_REQUEST)
+
     
     
     
