@@ -1,5 +1,10 @@
+from django.shortcuts import get_object_or_404
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from .serializers import WishSerializer
+#
 from django.shortcuts import render
-from .models import Wish
+from .models import Wish, WishlistItem
 # Create your views here.
 
 posts = [
@@ -28,11 +33,19 @@ def about(request):
     return render(request, 'wishlist/about.html', {'title': 'About'})
 
 def listview(request):
-    return render(request, 'wishlist/listview.html')
+    posts = WishlistItem.objects.all()
+    return render(request, 'wishlist/listview.html',{'posts':posts})
 
-def getItems(request):
-    return "Lots and lots of data"
+#wishs/
+class wishapi(APIView):
 
+    def get(self,request):
+        wishes = Wish.objects.all()
+        serializer = WishSerializer(wishes, many =True)
+        return Response(serializer.data)
+
+    def post(self):
+        pass
 # def createAccount(request):
 #     if request.method == 'POST':
 #         if request.POST.get('username') and request.POST.get('password'):
