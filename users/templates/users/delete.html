@@ -1,0 +1,28 @@
+{% extends "wishlist/base.html" %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+    <div class="content-section">
+        <form method="POST">
+            {% csrf_token %}
+            {{ user.username }}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Are you sure you want to Delete</legend>
+            {{form|crispy}}
+            </fieldset>
+            <div class="form-group">
+                <button class="btn btn-outline-info" type="submit">Delete</button>
+            </div>
+        </form>
+        <div class="border-top pt-3">
+            <small class="text-muted">
+                <a href="{% url 'wishlist-home' %}">Cancel</a>
+            </small>
+        </div>
+    </div>
+{% endblock content %}
+
+
+
+
+

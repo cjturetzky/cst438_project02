@@ -2,7 +2,8 @@ from django.shortcuts import render, redirect
 #from django.contrib.auth.forms import UserCreationForm
 #not used since we inherited from userregosterform
 from django.contrib import messages
-from .forms import UserRegisterForm, UserUpdateForm, ProfileUpdateForm
+from .forms import UserRegisterForm, UserUpdateForm, ProfileUpdateForm, RemoveUser
+from .models import User
 
 #user login decorator to show profile only if user is signed in
 from django.contrib.auth.decorators import login_required
@@ -43,6 +44,28 @@ def profile(request):
     }
 
     return render(request, 'users/profile.html', context)
+
+
+def delete(request):
+    print(request.user)
+    if request.method == 'POST':
+        print('if')
+        form = RemoveUser(request.POST)
+        if form.is_valid():
+            
+            password = form.cleaned_data.get('password')
+            if User.objects.filter(username=request.user, password=password).exists():
+                User.objects.filter(username=request.user).delete()
+            else:
+                print('wrong pass')
+        else:
+            print('not vaild')
+  
+    else:
+        print('else')
+        form = RemoveUser()
+    return render(request, 'users/delete.html', {'form': form}) 
+
 
 # messages.debug
 # messages.info

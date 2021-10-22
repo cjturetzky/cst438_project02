@@ -1,3 +1,4 @@
+
 from django.shortcuts import render, get_object_or_404
 from .models import Wish
 from django.contrib.auth.models import User
@@ -31,6 +32,7 @@ posts = [
 ]
 
 def home(request):
+    
     context = {
         'posts': Wish.objects.all()
     }
@@ -103,11 +105,9 @@ class WishDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
         return False
 
 
-
-
-
 def about(request):
     return render(request, 'wishlist/about.html', {'title': 'About'})
+
 
 
 # def products(request):

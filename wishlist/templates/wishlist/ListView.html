@@ -1,0 +1,16 @@
+{% extends "wishlist/base.html" %}
+
+{% block content %}
+
+    {% for post in posts %}
+        <div class="container">
+            <div class="item">
+                <img src="{{ post.img }}" height="200" width="200">
+                <b><p class="item_name">{{post.wname}}</p></b>
+                <i><a href="{{post.url}}">Link</a></i>
+                <p class="item_description">{{post.description}}</p>
+            </div>
+        
+        </div>
+    {% endfor %}   
+{% endblock content %}
