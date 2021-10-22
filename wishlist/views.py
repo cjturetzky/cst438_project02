@@ -2,6 +2,9 @@
 from django.shortcuts import render, get_object_or_404
 from .models import Wish
 from django.contrib.auth.models import User
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from .serializers import WishSerializer
 #import django class base views, import detail view
 from django.views.generic import (
     ListView,
