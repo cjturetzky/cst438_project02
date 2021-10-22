@@ -32,7 +32,7 @@ proguard/
 
 # Android Studio Navigation editor temp files
 .navigation/
-
+.idea
 # Android Studio captures folder
 captures/
 
@@ -62,6 +62,7 @@ fastlane/readme.md
 
 # Version control
 vcs.xml
+.idea
 
 # lint
 lint/intermediates/
