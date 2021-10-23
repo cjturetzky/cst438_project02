@@ -1,6 +1,7 @@
 {% extends "wishlist/base.html" %}
-
 {% block content %}
+    <center><h1 class="mytitle">All Wishes</h1></center>
+    <hr>
     {% for post in posts %}
         <article class="media content-section">
             <img class="rounded-circle article-img" src="{{ post.author.profile.image.url }}">
